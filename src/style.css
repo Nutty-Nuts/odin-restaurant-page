@@ -1,0 +1,39 @@
+.navbar {
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.navbar .left {
+    display: flex;
+
+    flex: 1;
+
+    flex-direction: row;
+
+    justify-content: left;
+    align-items: center;
+}
+
+.navbar .right {
+    display: flex;
+
+    flex: 1;
+
+    flex-direction: row;
+
+    justify-content: right;
+    align-items: center;
+}
+
+.navbar .right > div {
+    margin-left: 5rem;
+}
