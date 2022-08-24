@@ -2,6 +2,7 @@
 import { homePage } from "./homepage.js";
 import { infoPage } from "./info.js";
 import { hoursPage } from "./hours.js";
+import { menuPage } from "./menu.js";
 import "./style.css";
 
 function navbar() {
@@ -24,7 +25,7 @@ function navbar() {
     let menu = document.createElement("div");
     menu.innerHTML = "Menu";
 
-    // menu.addEventListener("click", goMenu);
+    menu.addEventListener("click", goMenu);
 
     let info = document.createElement("div");
     info.innerHTML = "Info";
@@ -48,15 +49,20 @@ let container = document.querySelector(".content");
 document.querySelector(".nav").append(navbar());
 
 function goHome() {
-    console.log("info");
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
     document.querySelector(".content").append(homePage());
 }
 
+function goMenu() {
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    document.querySelector(".content").append(menuPage());
+}
+
 function goInfo() {
-    console.log("info");
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
@@ -64,7 +70,6 @@ function goInfo() {
 }
 
 function goHours() {
-    console.log("info");
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
